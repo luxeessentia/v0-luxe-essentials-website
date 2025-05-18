@@ -26,8 +26,8 @@ const navigationItems = [
       { name: "Footwear", href: "/shop/footwear" },
     ],
   },
-  { name: "Login/Register", href: "/account" },
-  { name: "Orders & Returns", href: "/orders-returns" },
+  { name: "Login/Register", href: "/login" },
+  { name: "Orders & Returns", href: "/orders" },
   { name: "Contact", href: "/contact" },
   { name: "About", href: "/about" },
   { name: "FAQ", href: "/faq" },
@@ -61,6 +61,7 @@ export function SideNavigation() {
             <Link
               href={item.href}
               className={`block w-full py-2 px-4 text-[#8a5a5e] hover:bg-[#f8e1e3]/50 rounded-sm transition-colors ${level > 0 ? "text-sm pl-8" : ""}`}
+              onClick={() => setIsOpen(false)} // Close mobile menu when clicking a link
             >
               {item.name}
             </Link>

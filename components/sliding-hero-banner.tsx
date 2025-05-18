@@ -19,7 +19,7 @@ export function SlidingHeroBanner() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % bannerTexts.length)
-    }, 3000)
+    }, 5000) // Changed from 3000 to 5000 ms (5 seconds)
 
     return () => clearInterval(interval)
   }, [])
@@ -33,7 +33,7 @@ export function SlidingHeroBanner() {
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
+            transition={{ duration: 1.2, ease: "easeInOut" }} // Slowed down from 0.8 to 1.2
             className="absolute inset-0 flex items-center justify-center text-sm text-[#8a5a5e] font-light"
           >
             {bannerTexts[currentIndex]}

@@ -33,8 +33,8 @@ export function LogoHeader() {
             <Image
               src="/images/luxe-logo.png"
               alt="Luxe Essentials - Elevate Your Style"
-              width={scrolled ? 800 : 1200}
-              height={scrolled ? 200 : 300}
+              width={scrolled ? 500 : 700}
+              height={scrolled ? 125 : 175}
               className="transition-all duration-300 max-w-full h-auto"
               style={{ objectFit: "contain" }}
               priority
