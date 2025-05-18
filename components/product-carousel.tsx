@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef } from "react"
+import { useRef, useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { ChevronLeft, ChevronRight } from "lucide-react"
@@ -40,6 +40,11 @@ const mockProducts: Record<string, Product[]> = {
 export function ProductCarousel({ category }: { category: string }) {
   const scrollRef = useRef<HTMLDivElement>(null)
   const products = mockProducts[category] || []
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
@@ -48,6 +53,25 @@ export function ProductCarousel({ category }: { category: string }) {
 
       current.scrollBy({ left: scrollAmount, behavior: "smooth" })
     }
+  }
+
+  // Simplified version for initial render
+  if (!mounted) {
+    return (
+      <div className="relative">
+        <div className="flex overflow-x-auto scrollbar-hide gap-4 pb-4">
+          {products.slice(0, 3).map((product) => (
+            <div key={product.id} className="flex-none w-[250px]">
+              <div className="relative h-[250px] w-[250px] bg-[#f8f5f2] rounded-md overflow-hidden"></div>
+              <div className="mt-3">
+                <h3 className="text-[#8a5a5e] font-light">{product.name}</h3>
+                <p className="text-[#8a5a5e]/80">{product.price}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    )
   }
 
   return (
