@@ -98,7 +98,7 @@ export default function OrdersPage() {
               Return requests must be submitted within 48 hours of receiving your order. All items must be in their
               original packaging and unworn/unused condition. Please note that shipping costs are non-refundable.
             </p>
-            <button className="bg-black text-white py-2 px-4 rounded-sm hover:bg-black/80 transition-colors">
+            <button className="bg-[#D9A5B3] text-white py-2 px-4 rounded-sm hover:bg-[#c99aaa] transition-colors">
               Start New Return
             </button>
           </div>

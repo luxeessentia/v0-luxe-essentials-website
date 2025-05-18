@@ -5,42 +5,76 @@ export default function FAQPage() {
 
       <div className="bg-white rounded-lg shadow-md p-6 md:p-8">
         <div className="space-y-6">
-          <div className="border-b border-[#e5c1c4] pb-6">
-            <h2 className="text-xl font-bold text-black mb-3">Shipping & Delivery</h2>
+          {/* Ordering */}
+          <div>
+            <h2 className="text-xl font-bold text-black mb-4">Ordering</h2>
 
             <div className="space-y-4">
               <div>
-                <h3 className="font-bold text-black mb-2">How long will it take to receive my order?</h3>
+                <h3 className="text-lg font-bold text-black mb-2">How do I place an order?</h3>
                 <p className="text-black">
-                  Standard shipping typically takes 3-5 business days within the continental US. Express shipping is 1-2
-                  business days. International shipping may take 7-14 business days depending on the destination.
+                  You can place an order by browsing our products, selecting the items you want, adding them to your
+                  cart, and proceeding to checkout. Follow the steps to enter your shipping and payment information to
+                  complete your purchase.
                 </p>
               </div>
 
               <div>
-                <h3 className="font-bold text-black mb-2">Do you offer free shipping?</h3>
+                <h3 className="text-lg font-bold text-black mb-2">Can I modify or cancel my order?</h3>
                 <p className="text-black">
-                  Yes! We offer free standard shipping on all US orders over $50 and free express shipping on US orders
-                  over $100.
+                  You can modify or cancel your order within 1 hour of placing it by contacting our customer service
+                  team. After this window, we begin processing orders and may not be able to make changes.
                 </p>
               </div>
 
               <div>
-                <h3 className="font-bold text-black mb-2">Do you ship internationally?</h3>
+                <h3 className="text-lg font-bold text-black mb-2">Do you offer gift wrapping?</h3>
                 <p className="text-black">
-                  Yes, we ship to most countries worldwide. International shipping rates are calculated at checkout
-                  based on destination and package weight.
+                  Yes, we offer gift wrapping services for an additional $5 per item. You can select this option during
+                  checkout and include a personalized message for the recipient.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="border-b border-[#e5c1c4] pb-6">
-            <h2 className="text-xl font-bold text-black mb-3">Returns & Exchanges</h2>
+          {/* Shipping */}
+          <div>
+            <h2 className="text-xl font-bold text-black mb-4">Shipping & Delivery</h2>
 
             <div className="space-y-4">
               <div>
-                <h3 className="font-bold text-black mb-2">What is your return policy?</h3>
+                <h3 className="text-lg font-bold text-black mb-2">What are your shipping options?</h3>
+                <p className="text-black">
+                  We offer standard shipping (5-7 business days) and express shipping (2-3 business days). Standard
+                  shipping is free for orders over $50, and express shipping is free for orders over $100.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-bold text-black mb-2">Do you ship internationally?</h3>
+                <p className="text-black">
+                  Currently, we only ship within the United States. We plan to expand our shipping options to
+                  international destinations in the future.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-bold text-black mb-2">How can I track my order?</h3>
+                <p className="text-black">
+                  Once your order ships, you'll receive a confirmation email with a tracking number. You can also track
+                  your order on our website by going to the Orders & Returns page and entering your order ID.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Returns & Refunds */}
+          <div>
+            <h2 className="text-xl font-bold text-black mb-4">Returns & Refunds</h2>
+
+            <div className="space-y-4">
+              <div>
+                <h3 className="text-lg font-bold text-black mb-2">What is your return policy?</h3>
                 <p className="text-black">
                   We accept returns within 48 hours of delivery. Items must be in their original condition with tags
                   attached. Please note that shipping costs are non-refundable.
@@ -48,77 +82,82 @@ export default function FAQPage() {
               </div>
 
               <div>
-                <h3 className="font-bold text-black mb-2">How do I start a return?</h3>
+                <h3 className="text-lg font-bold text-black mb-2">How do I initiate a return?</h3>
                 <p className="text-black">
-                  To initiate a return, please visit our Orders & Returns page and fill out the return form with your
-                  order details.
+                  To initiate a return, go to the Orders & Returns page on our website, enter your order information,
+                  and follow the prompts to complete the return request form.
                 </p>
               </div>
 
               <div>
-                <h3 className="font-bold text-black mb-2">Can I exchange an item?</h3>
+                <h3 className="text-lg font-bold text-black mb-2">When will I receive my refund?</h3>
                 <p className="text-black">
-                  Yes, exchanges are available for items of equal value. Please contact our customer service team to
-                  arrange an exchange.
+                  Once we receive and inspect your return, we'll process your refund within 3-5 business days. The time
+                  it takes for the refund to appear in your account depends on your payment method and financial
+                  institution.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="border-b border-[#e5c1c4] pb-6">
-            <h2 className="text-xl font-bold text-black mb-3">Products & Care</h2>
-
-            <div className="space-y-4">
-              <div>
-                <h3 className="font-bold text-black mb-2">Are your handmade bags really handmade?</h3>
-                <p className="text-black">
-                  Yes, all of our handmade bags are crafted by skilled artisans using traditional techniques. Each piece
-                  is unique and may have slight variations that add to its character.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="font-bold text-black mb-2">How should I care for my leather products?</h3>
-                <p className="text-black">
-                  We recommend keeping leather items away from direct sunlight and moisture. Clean with a soft, dry
-                  cloth and use a leather conditioner occasionally to maintain suppleness.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="font-bold text-black mb-2">Are your beauty products tested on animals?</h3>
-                <p className="text-black">
-                  No, all of our beauty products are cruelty-free and have not been tested on animals.
-                </p>
-              </div>
-            </div>
-          </div>
-
+          {/* Products */}
           <div>
-            <h2 className="text-xl font-bold text-black mb-3">Payment & Security</h2>
+            <h2 className="text-xl font-bold text-black mb-4">Products</h2>
 
             <div className="space-y-4">
               <div>
-                <h3 className="font-bold text-black mb-2">What payment methods do you accept?</h3>
+                <h3 className="text-lg font-bold text-black mb-2">Are your handmade bags really handmade?</h3>
+                <p className="text-black">
+                  Yes, all of our handmade bags are crafted by skilled artisans. Each piece is unique and may have
+                  slight variations, which is part of the charm of handmade items.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-bold text-black mb-2">How do I care for my products?</h3>
+                <p className="text-black">
+                  Care instructions vary by product. You can find specific care information on each product page or on
+                  the tag that comes with your item. Generally, we recommend storing items in a cool, dry place away
+                  from direct sunlight.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-bold text-black mb-2">Do you offer warranties on tech accessories?</h3>
+                <p className="text-black">
+                  Yes, all of our tech accessories come with a 6-month warranty against manufacturing defects. Please
+                  keep your order confirmation as proof of purchase.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Account & Payment */}
+          <div>
+            <h2 className="text-xl font-bold text-black mb-4">Account & Payment</h2>
+
+            <div className="space-y-4">
+              <div>
+                <h3 className="text-lg font-bold text-black mb-2">Do I need to create an account to shop?</h3>
+                <p className="text-black">
+                  No, you can check out as a guest. However, creating an account allows you to track orders, save
+                  favorites, and enjoy a faster checkout experience for future purchases.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-bold text-black mb-2">What payment methods do you accept?</h3>
                 <p className="text-black">
                   We accept all major credit cards (Visa, Mastercard, American Express, Discover), PayPal, Apple Pay,
-                  and Google Pay. We also offer buy-now-pay-later options through Klarna, Affirm, and Zip.
+                  and Google Pay. We also offer Buy Now Pay Later options through Klarna, Affirm, and Zip.
                 </p>
               </div>
 
               <div>
-                <h3 className="font-bold text-black mb-2">Is my payment information secure?</h3>
+                <h3 className="text-lg font-bold text-black mb-2">Is my payment information secure?</h3>
                 <p className="text-black">
-                  Yes, all payment information is encrypted and processed securely. We do not store your full credit
-                  card details on our servers.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="font-bold text-black mb-2">Can I cancel my order?</h3>
-                <p className="text-black">
-                  Orders can be canceled within 1 hour of placement. After that, we begin processing orders quickly and
-                  may not be able to cancel. Please contact customer service immediately if you need to cancel.
+                  Yes, we use industry-standard encryption and security measures to protect your payment information. We
+                  never store your full credit card details on our servers.
                 </p>
               </div>
             </div>

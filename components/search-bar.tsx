@@ -30,11 +30,11 @@ export function SearchBar() {
           placeholder="Search products..."
           className="w-full pl-10 pr-10 py-2 border border-[#e9d8fd] rounded-sm focus:outline-none focus:ring-1 focus:ring-black"
         />
-        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-black" />
+        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-black/70" />
 
         {inputValue && (
           <button type="button" onClick={clearSearch} className="absolute right-10 top-1/2 transform -translate-y-1/2">
-            <X className="h-4 w-4 text-black" />
+            <X className="h-4 w-4 text-black/70" />
             <span className="sr-only">Clear search</span>
           </button>
         )}

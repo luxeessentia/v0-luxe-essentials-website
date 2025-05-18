@@ -49,7 +49,7 @@ export function SideNavigation() {
           {item.subItems ? (
             <button
               onClick={() => toggleExpand(item.name)}
-              className={`flex items-center justify-between w-full py-2 px-4 text-black font-bold hover:bg-[#e9d8fd]/50 rounded-sm transition-colors ${level > 0 ? "text-sm pl-8" : ""}`}
+              className={`flex items-center justify-between w-full py-2 px-4 text-black hover:bg-[#e9d8fd]/50 rounded-sm transition-colors font-bold ${level > 0 ? "text-sm pl-8" : ""}`}
             >
               <span>{item.name}</span>
               {expandedItems.includes(item.name) ? (
@@ -61,7 +61,7 @@ export function SideNavigation() {
           ) : (
             <Link
               href={item.href}
-              className={`block w-full py-2 px-4 text-black font-bold hover:bg-[#e9d8fd]/50 rounded-sm transition-colors ${level > 0 ? "text-sm pl-8" : ""}`}
+              className={`block w-full py-2 px-4 text-black hover:bg-[#e9d8fd]/50 rounded-sm transition-colors font-bold ${level > 0 ? "text-sm pl-8" : ""}`}
               onClick={() => setIsOpen(false)} // Close mobile menu when clicking a link
             >
               {item.name}

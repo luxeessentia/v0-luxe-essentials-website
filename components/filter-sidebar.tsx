@@ -102,7 +102,7 @@ export function FilterSidebar() {
             <div className="mt-2">
               <div className="flex items-center gap-2 mb-2">
                 <div className="flex-1">
-                  <label htmlFor="min-price" className="block text-xs text-black mb-1">
+                  <label htmlFor="min-price" className="block text-xs text-black/70 mb-1">
                     Min
                   </label>
                   <input
@@ -116,7 +116,7 @@ export function FilterSidebar() {
                   />
                 </div>
                 <div className="flex-1">
-                  <label htmlFor="max-price" className="block text-xs text-black mb-1">
+                  <label htmlFor="max-price" className="block text-xs text-black/70 mb-1">
                     Max
                   </label>
                   <input
@@ -162,7 +162,7 @@ export function FilterSidebar() {
                   title={colorDisplay[color]?.text || color}
                 >
                   <span className={`block w-6 h-6 rounded-full ${colorDisplay[color]?.bg || "bg-gray-200"}`}></span>
-                  <span className="text-xs mt-1 text-black">{colorDisplay[color]?.text || color}</span>
+                  <span className="text-xs mt-1 text-black/70">{colorDisplay[color]?.text || color}</span>
                 </button>
               ))}
             </div>
@@ -189,7 +189,7 @@ export function FilterSidebar() {
                     onChange={() => toggleCategory(category)}
                     className="mr-2 accent-black"
                   />
-                  <span className="text-sm capitalize text-black">{category}</span>
+                  <span className="text-sm capitalize font-bold">{category}</span>
                 </label>
               ))}
             </div>
@@ -216,7 +216,7 @@ export function FilterSidebar() {
                     onChange={() => toggleSubcategory(subcategory)}
                     className="mr-2 accent-black"
                   />
-                  <span className="text-sm capitalize text-black">{subcategory}</span>
+                  <span className="text-sm capitalize">{subcategory}</span>
                 </label>
               ))}
             </div>
@@ -289,7 +289,7 @@ export function FilterSidebar() {
                 <div className="mt-2">
                   <div className="flex items-center gap-2 mb-2">
                     <div className="flex-1">
-                      <label htmlFor="min-price-mobile" className="block text-xs text-black mb-1">
+                      <label htmlFor="min-price-mobile" className="block text-xs text-black/70 mb-1">
                         Min
                       </label>
                       <input
@@ -303,7 +303,7 @@ export function FilterSidebar() {
                       />
                     </div>
                     <div className="flex-1">
-                      <label htmlFor="max-price-mobile" className="block text-xs text-black mb-1">
+                      <label htmlFor="max-price-mobile" className="block text-xs text-black/70 mb-1">
                         Max
                       </label>
                       <input
@@ -353,7 +353,7 @@ export function FilterSidebar() {
                       title={colorDisplay[color]?.text || color}
                     >
                       <span className={`block w-6 h-6 rounded-full ${colorDisplay[color]?.bg || "bg-gray-200"}`}></span>
-                      <span className="text-xs mt-1 text-black">{colorDisplay[color]?.text || color}</span>
+                      <span className="text-xs mt-1 text-black/70">{colorDisplay[color]?.text || color}</span>
                     </button>
                   ))}
                 </div>
@@ -384,7 +384,7 @@ export function FilterSidebar() {
                         onChange={() => toggleCategory(category)}
                         className="mr-2 accent-black"
                       />
-                      <span className="text-sm capitalize text-black">{category}</span>
+                      <span className="text-sm capitalize font-bold">{category}</span>
                     </label>
                   ))}
                 </div>
@@ -415,7 +415,7 @@ export function FilterSidebar() {
                         onChange={() => toggleSubcategory(subcategory)}
                         className="mr-2 accent-black"
                       />
-                      <span className="text-sm capitalize text-black">{subcategory}</span>
+                      <span className="text-sm capitalize">{subcategory}</span>
                     </label>
                   ))}
                 </div>

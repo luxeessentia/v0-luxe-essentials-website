@@ -15,13 +15,13 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-lg font-bold text-black mb-4">About Luxe Essentials</h3>
-            <p className="text-sm text-black">
+            <p className="text-sm text-black/80">
               Luxe Essentials offers premium quality products with elegant design and exceptional craftsmanship.
             </p>
           </div>
           <div>
             <h3 className="text-lg font-bold text-black mb-4">Quick Links</h3>
-            <ul className="space-y-2 text-sm text-black">
+            <ul className="space-y-2 text-sm text-black/80">
               <li>
                 <a href="/about" className="hover:text-black transition-colors">
                   About Us
@@ -46,7 +46,7 @@ export default function HomePage() {
           </div>
           <div>
             <h3 className="text-lg font-bold text-black mb-4">Newsletter</h3>
-            <p className="text-sm text-black mb-2">Sign up to receive updates on new arrivals and special offers.</p>
+            <p className="text-sm text-black/80 mb-2">Sign up to receive updates on new arrivals and special offers.</p>
             <div className="flex">
               <input
                 type="email"
@@ -59,7 +59,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className="mt-8 text-center text-sm text-black">
+        <div className="mt-8 text-center text-sm text-black/70">
           &copy; {new Date().getFullYear()} Luxe Essentials. All rights reserved.
         </div>
       </footer>
