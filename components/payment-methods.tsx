@@ -1,58 +1,60 @@
+import Image from "next/image"
+
 export function PaymentMethods() {
   return (
     <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6">
       <div className="flex flex-col items-center">
-        <div className="bg-white p-2 rounded-md shadow-sm h-[40px] w-[60px] flex items-center justify-center">
-          <span className="text-blue-700 font-bold text-sm">VISA</span>
+        <div className="bg-white p-2 rounded-md shadow-sm">
+          <Image src="/images/visa.png" alt="Visa" width={60} height={40} className="object-contain" />
         </div>
         <span className="text-xs text-[#8a5a5e]/70 mt-1">Visa</span>
       </div>
 
       <div className="flex flex-col items-center">
-        <div className="bg-white p-2 rounded-md shadow-sm h-[40px] w-[60px] flex items-center justify-center">
-          <span className="text-red-600 font-bold text-sm">MC</span>
+        <div className="bg-white p-2 rounded-md shadow-sm">
+          <Image src="/images/mastercard.png" alt="Mastercard" width={60} height={40} className="object-contain" />
         </div>
         <span className="text-xs text-[#8a5a5e]/70 mt-1">Mastercard</span>
       </div>
 
       <div className="flex flex-col items-center">
-        <div className="bg-white p-2 rounded-md shadow-sm h-[40px] w-[60px] flex items-center justify-center">
-          <span className="text-blue-500 font-bold text-sm">AMEX</span>
+        <div className="bg-white p-2 rounded-md shadow-sm">
+          <Image src="/images/amex.png" alt="American Express" width={60} height={40} className="object-contain" />
         </div>
         <span className="text-xs text-[#8a5a5e]/70 mt-1">Amex</span>
       </div>
 
       <div className="flex flex-col items-center">
-        <div className="bg-white p-2 rounded-md shadow-sm h-[40px] w-[60px] flex items-center justify-center">
-          <span className="text-orange-500 font-bold text-sm">DISC</span>
+        <div className="bg-white p-2 rounded-md shadow-sm">
+          <Image src="/images/discover.png" alt="Discover" width={60} height={40} className="object-contain" />
         </div>
         <span className="text-xs text-[#8a5a5e]/70 mt-1">Discover</span>
       </div>
 
       <div className="flex flex-col items-center">
-        <div className="bg-white p-2 rounded-md shadow-sm h-[40px] w-[60px] flex items-center justify-center">
-          <span className="text-pink-500 font-bold text-sm">KLR</span>
+        <div className="bg-white p-2 rounded-md shadow-sm">
+          <Image src="/images/klarna.png" alt="Klarna" width={60} height={40} className="object-contain" />
         </div>
         <span className="text-xs text-[#8a5a5e]/70 mt-1">Klarna</span>
       </div>
 
       <div className="flex flex-col items-center">
-        <div className="bg-white p-2 rounded-md shadow-sm h-[40px] w-[60px] flex items-center justify-center">
-          <span className="text-purple-600 font-bold text-sm">AFM</span>
+        <div className="bg-white p-2 rounded-md shadow-sm">
+          <Image src="/images/affirm.png" alt="Affirm" width={60} height={40} className="object-contain" />
         </div>
         <span className="text-xs text-[#8a5a5e]/70 mt-1">Affirm</span>
       </div>
 
       <div className="flex flex-col items-center">
-        <div className="bg-white p-2 rounded-md shadow-sm h-[40px] w-[60px] flex items-center justify-center">
-          <span className="text-black font-bold text-sm">AP</span>
+        <div className="bg-white p-2 rounded-md shadow-sm">
+          <Image src="/images/apple-pay.png" alt="Apple Pay" width={60} height={40} className="object-contain" />
         </div>
         <span className="text-xs text-[#8a5a5e]/70 mt-1">Apple Pay</span>
       </div>
 
       <div className="flex flex-col items-center">
-        <div className="bg-white p-2 rounded-md shadow-sm h-[40px] w-[60px] flex items-center justify-center">
-          <span className="text-blue-600 font-bold text-sm">GP</span>
+        <div className="bg-white p-2 rounded-md shadow-sm">
+          <Image src="/images/google-pay.png" alt="Google Pay" width={60} height={40} className="object-contain" />
         </div>
         <span className="text-xs text-[#8a5a5e]/70 mt-1">Google Pay</span>
       </div>
