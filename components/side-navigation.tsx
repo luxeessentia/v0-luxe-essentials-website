@@ -10,20 +10,11 @@ const navigationItems = [
     name: "Shop",
     href: "/shop",
     subItems: [
-      { name: "Handmade Bags", href: "/shop/bags" },
-      { name: "Clothing", href: "/shop/clothing" },
-      {
-        name: "Tech & Accessories",
-        href: "/shop/tech",
-        subItems: [
-          { name: "Phone Accessories", href: "/shop/tech/phone" },
-          { name: "Audio", href: "/shop/tech/audio" },
-          { name: "Wellness Devices", href: "/shop/tech/wellness" },
-        ],
-      },
-      { name: "Beauty/Makeup", href: "/shop/beauty" },
-      { name: "Jewelry & Accessories", href: "/shop/jewelry" },
-      { name: "Footwear", href: "/shop/footwear" },
+      { name: "All Products", href: "/shop" },
+      { name: "Bags", href: "/shop/bags" },
+      { name: "Tech", href: "/shop/tech" },
+      { name: "Jewelry", href: "/shop/jewelry" },
+      { name: "Beauty", href: "/shop/beauty" },
     ],
   },
   { name: "Login/Register", href: "/login" },
@@ -48,7 +39,7 @@ export function SideNavigation() {
           {item.subItems ? (
             <button
               onClick={() => toggleExpand(item.name)}
-              className={`flex items-center justify-between w-full py-2 px-4 text-[#8a5a5e] hover:bg-[#f8e1e3]/50 rounded-sm transition-colors ${level > 0 ? "text-sm pl-8" : ""}`}
+              className={`flex items-center justify-between w-full py-2 px-4 text-black hover:bg-[#e9d8fd]/50 rounded-sm transition-colors ${level > 0 ? "text-sm pl-8" : ""}`}
             >
               <span>{item.name}</span>
               {expandedItems.includes(item.name) ? (
@@ -60,7 +51,7 @@ export function SideNavigation() {
           ) : (
             <Link
               href={item.href}
-              className={`block w-full py-2 px-4 text-[#8a5a5e] hover:bg-[#f8e1e3]/50 rounded-sm transition-colors ${level > 0 ? "text-sm pl-8" : ""}`}
+              className={`block w-full py-2 px-4 text-black hover:bg-[#e9d8fd]/50 rounded-sm transition-colors ${level > 0 ? "text-sm pl-8" : ""}`}
               onClick={() => setIsOpen(false)} // Close mobile menu when clicking a link
             >
               {item.name}
@@ -69,7 +60,7 @@ export function SideNavigation() {
         </div>
 
         {item.subItems && expandedItems.includes(item.name) && (
-          <div className="ml-2 border-l border-[#e5c1c4] pl-2 mt-1">{renderNavItems(item.subItems, level + 1)}</div>
+          <div className="ml-2 border-l border-[#e9d8fd] pl-2 mt-1">{renderNavItems(item.subItems, level + 1)}</div>
         )}
       </div>
     ))
@@ -80,14 +71,14 @@ export function SideNavigation() {
       {/* Mobile Menu Button - Fixed Position */}
       <button
         onClick={() => setIsOpen(true)}
-        className="md:hidden fixed top-4 left-4 z-50 flex items-center justify-center w-10 h-10 bg-[#f8e1e3] rounded-full shadow-sm hover:bg-[#f5d1d4] transition-colors"
+        className="md:hidden fixed top-4 left-4 z-50 flex items-center justify-center w-10 h-10 bg-[#e9d8fd] rounded-full shadow-sm hover:bg-[#d6bcfa] transition-colors"
       >
-        <Menu className="h-5 w-5 text-[#8a5a5e]" />
+        <Menu className="h-5 w-5 text-black" />
         <span className="sr-only">Open Menu</span>
       </button>
 
       {/* Sidebar Navigation - Desktop */}
-      <div className="hidden md:block w-64 bg-[#faf7f5] border-r border-[#f8e1e3] h-screen overflow-y-auto sticky top-0">
+      <div className="hidden md:block w-64 bg-[#faf7f5] border-r border-[#e9d8fd] h-screen overflow-y-auto sticky top-0">
         <div className="p-6">
           <nav className="mt-8">{renderNavItems(navigationItems)}</nav>
         </div>
@@ -100,10 +91,10 @@ export function SideNavigation() {
             className="absolute top-0 left-0 w-64 h-full bg-[#faf7f5] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="p-4 flex justify-between items-center border-b border-[#f8e1e3]">
-              <h2 className="font-light text-[#8a5a5e]">Menu</h2>
+            <div className="p-4 flex justify-between items-center border-b border-[#e9d8fd]">
+              <h2 className="font-light text-black">Menu</h2>
               <button onClick={() => setIsOpen(false)}>
-                <X className="h-5 w-5 text-[#8a5a5e]" />
+                <X className="h-5 w-5 text-black" />
                 <span className="sr-only">Close Menu</span>
               </button>
             </div>

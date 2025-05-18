@@ -32,8 +32,8 @@ export function SlidingHeroBanner() {
   }, [])
 
   return (
-    <div className="bg-[#f8e1e3] py-2 overflow-hidden">
-      <div className="relative h-6">
+    <div className="bg-[#e9d8fd] py-1.5 overflow-hidden">
+      <div className="relative h-5">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -41,14 +41,14 @@ export function SlidingHeroBanner() {
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
-            className="absolute inset-0 flex items-center justify-center text-sm text-[#8a5a5e] font-light"
+            className="absolute inset-0 flex items-center justify-center text-xs text-black font-light"
           >
             {typeof bannerTexts[currentIndex] === "string" ? (
               bannerTexts[currentIndex]
             ) : (
               <div className="flex items-center space-x-1">
                 <span>{bannerTexts[currentIndex].text}</span>
-                <Link href={bannerTexts[currentIndex].link.href} className="underline font-medium hover:text-[#D9A5B3]">
+                <Link href={bannerTexts[currentIndex].link.href} className="underline font-medium hover:text-[#6b46c1]">
                   {bannerTexts[currentIndex].link.text}
                 </Link>
               </div>

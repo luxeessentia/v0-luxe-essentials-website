@@ -7,6 +7,7 @@ import { LogoHeader } from "../components/logo-header"
 import { SideNavigation } from "../components/side-navigation"
 import { CartIcon } from "../components/cart-icon"
 import { CartProvider } from "../context/cart-context"
+import { FilterProvider } from "../context/filter-context"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -25,32 +26,34 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <CartProvider>
-          <div className="flex min-h-screen bg-[#faf7f5] relative">
-            {/* Side Navigation (always present) */}
-            <SideNavigation />
+          <FilterProvider>
+            <div className="flex min-h-screen bg-[#faf7f5] relative">
+              {/* Side Navigation (always present) */}
+              <SideNavigation />
 
-            {/* Main Content */}
-            <div className="flex-1 w-full overflow-x-hidden">
-              {/* Sliding Hero Banner */}
-              <SlidingHeroBanner />
+              {/* Main Content */}
+              <div className="flex-1 w-full overflow-x-hidden">
+                {/* Sliding Hero Banner */}
+                <SlidingHeroBanner />
 
-              {/* Logo Header */}
-              <div className="mb-4">
-                <LogoHeader />
-              </div>
+                {/* Logo Header */}
+                <div className="mb-4">
+                  <LogoHeader />
+                </div>
 
-              {/* Cart Icon - Fixed Top Right */}
-              <CartIcon />
+                {/* Cart Icon - Fixed Top Right */}
+                <CartIcon />
 
-              {/* Page Content */}
-              {children}
+                {/* Page Content */}
+                {children}
 
-              {/* Sticky Bottom Bar */}
-              <div className="fixed bottom-0 left-0 right-0 bg-[#f8e1e3] py-3 text-center text-sm text-[#8a5a5e] z-40">
-                📦 FREE STANDARD SHIPPING ON U.S. ORDERS $50+ | FREE EXPRESS SHIPPING ON U.S. ORDERS $100+
+                {/* Sticky Bottom Bar */}
+                <div className="fixed bottom-0 left-0 right-0 bg-[#e9d8fd] py-3 text-center text-sm text-black z-40">
+                  📦 FREE STANDARD SHIPPING ON U.S. ORDERS $50+ | FREE EXPRESS SHIPPING ON U.S. ORDERS $100+
+                </div>
               </div>
             </div>
-          </div>
+          </FilterProvider>
         </CartProvider>
       </body>
     </html>
