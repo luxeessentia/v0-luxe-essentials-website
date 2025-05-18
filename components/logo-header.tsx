@@ -23,17 +23,20 @@ export function LogoHeader() {
 
   return (
     <header
-      className={`sticky top-0 z-40 bg-[#faf7f5] transition-all duration-300 ${scrolled ? "py-2 shadow-sm" : "py-4"}`}
+      className={`sticky top-0 z-40 bg-[#faf7f5] transition-all duration-300 w-full ${
+        scrolled ? "py-2 shadow-sm" : "py-4"
+      }`}
     >
-      <div className="flex justify-center items-center px-4">
-        <Link href="/" className="block">
-          <div className={`relative transition-all duration-300 ${scrolled ? "h-12 w-auto" : "h-16 w-auto"}`}>
+      <div className="flex justify-center items-center px-4 w-full">
+        <Link href="/" className="block w-full">
+          <div className="relative w-full flex justify-center">
             <Image
               src="/images/luxe-logo.png"
               alt="Luxe Essentials - Elevate Your Style"
-              width={scrolled ? 180 : 240}
-              height={scrolled ? 60 : 80}
-              className="transition-all duration-300"
+              width={scrolled ? 800 : 1200}
+              height={scrolled ? 200 : 300}
+              className="transition-all duration-300 max-w-full h-auto"
+              style={{ objectFit: "contain" }}
               priority
             />
           </div>

@@ -5,7 +5,6 @@ import { ShoppingBag } from "lucide-react"
 import { ProductCarousel } from "@/components/product-carousel"
 import { SlidingHeroBanner } from "@/components/sliding-hero-banner"
 import { SideNavigation } from "@/components/side-navigation"
-import { PaymentMethods } from "@/components/payment-methods"
 import { LogoHeader } from "@/components/logo-header"
 
 export default function HomePage() {
@@ -19,8 +18,10 @@ export default function HomePage() {
         {/* Sliding Hero Banner */}
         <SlidingHeroBanner />
 
-        {/* Logo Header */}
-        <LogoHeader />
+        {/* Logo Header with more space */}
+        <div className="mb-4">
+          <LogoHeader />
+        </div>
 
         {/* Cart Icon - Top Right */}
         <div className="fixed top-4 right-4 z-50">
@@ -79,12 +80,6 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-        </section>
-
-        {/* Payment Methods */}
-        <section className="mt-16 px-4 md:px-8">
-          <h2 className="text-xl font-light text-[#8a5a5e] mb-4 text-center">Payment Methods</h2>
-          <PaymentMethods />
         </section>
 
         {/* Footer */}
