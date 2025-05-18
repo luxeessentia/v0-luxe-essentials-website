@@ -77,7 +77,7 @@ export function SideNavigation() {
 
   return (
     <>
-      {/* Mobile Menu Button */}
+      {/* Mobile Menu Button - Fixed Position */}
       <button
         onClick={() => setIsOpen(true)}
         className="md:hidden fixed top-4 left-4 z-50 flex items-center justify-center w-10 h-10 bg-[#f8e1e3] rounded-full shadow-sm hover:bg-[#f5d1d4] transition-colors"
