@@ -48,7 +48,7 @@ export default function RootLayout({
                 {children}
 
                 {/* Sticky Bottom Bar */}
-                <div className="fixed bottom-0 left-0 right-0 bg-[#e9d8fd] py-3 text-center text-sm text-black z-40">
+                <div className="fixed bottom-0 left-0 right-0 bg-[#e9d8fd] py-3 text-center text-sm text-black font-bold z-40">
                   📦 FREE STANDARD SHIPPING ON U.S. ORDERS $50+ | FREE EXPRESS SHIPPING ON U.S. ORDERS $100+
                 </div>
               </div>

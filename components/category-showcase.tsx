@@ -3,7 +3,6 @@
 import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ChevronLeft, ChevronRight } from "lucide-react"
 import { getProductsByCategory } from "../app/data/products"
 
 type CategoryShowcaseProps = {
@@ -21,24 +20,6 @@ export function CategoryShowcase({ title, category, linkPath }: CategoryShowcase
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % totalProducts)
-  }
-
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + totalProducts) % totalProducts)
-  }
-
-  // Reset autoplay timer when manually changing slides
-  const handleManualNavigation = (callback: () => void) => {
-    if (autoPlayRef.current) {
-      clearInterval(autoPlayRef.current)
-    }
-    setIsAutoPlaying(false)
-    callback()
-
-    // Resume autoplay after 5 seconds of inactivity
-    setTimeout(() => {
-      setIsAutoPlaying(true)
-    }, 5000)
   }
 
   // Handle autoplay
@@ -65,7 +46,7 @@ export function CategoryShowcase({ title, category, linkPath }: CategoryShowcase
   return (
     <div className="mb-12">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-xl md:text-2xl font-light text-black">{title}</h2>
+        <h2 className="text-xl md:text-2xl font-bold text-black">{title}</h2>
         <Link href={linkPath} className="text-sm text-black hover:underline">
           View All
         </Link>
@@ -89,43 +70,20 @@ export function CategoryShowcase({ title, category, linkPath }: CategoryShowcase
                     className="object-contain"
                     priority={index === 0}
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-black/50 p-4">
-                    <h3 className="text-white text-lg font-light">{product.name}</h3>
-                  </div>
                 </div>
               </Link>
             </div>
           ))}
         </div>
 
-        {/* Navigation Arrows */}
-        {totalProducts > 1 && (
-          <>
-            <button
-              onClick={() => handleManualNavigation(prevSlide)}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 rounded-full p-2 hover:bg-white transition-colors"
-              aria-label="Previous product"
-            >
-              <ChevronLeft className="h-5 w-5 text-black" />
-            </button>
-            <button
-              onClick={() => handleManualNavigation(nextSlide)}
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 rounded-full p-2 hover:bg-white transition-colors"
-              aria-label="Next product"
-            >
-              <ChevronRight className="h-5 w-5 text-black" />
-            </button>
-          </>
-        )}
-
         {/* Dots Indicator */}
         {totalProducts > 1 && (
-          <div className="absolute bottom-16 left-1/2 -translate-x-1/2 z-20 flex space-x-2">
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex space-x-2">
             {products.map((_, index) => (
               <button
                 key={index}
-                onClick={() => handleManualNavigation(() => setCurrentIndex(index))}
-                className={`w-2 h-2 rounded-full ${index === currentIndex ? "bg-white" : "bg-white/50"}`}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-2 h-2 rounded-full ${index === currentIndex ? "bg-black" : "bg-black/50"}`}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}

@@ -14,14 +14,14 @@ export default function HomePage() {
       <footer className="mt-16 px-4 py-8 bg-[#e9d8fd]/30">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-lg font-medium text-black mb-4">About Luxe Essentials</h3>
-            <p className="text-sm text-black/80">
+            <h3 className="text-lg font-bold text-black mb-4">About Luxe Essentials</h3>
+            <p className="text-sm text-black">
               Luxe Essentials offers premium quality products with elegant design and exceptional craftsmanship.
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-medium text-black mb-4">Quick Links</h3>
-            <ul className="space-y-2 text-sm text-black/80">
+            <h3 className="text-lg font-bold text-black mb-4">Quick Links</h3>
+            <ul className="space-y-2 text-sm text-black">
               <li>
                 <a href="/about" className="hover:text-black transition-colors">
                   About Us
@@ -45,21 +45,21 @@ export default function HomePage() {
             </ul>
           </div>
           <div>
-            <h3 className="text-lg font-medium text-black mb-4">Newsletter</h3>
-            <p className="text-sm text-black/80 mb-2">Sign up to receive updates on new arrivals and special offers.</p>
+            <h3 className="text-lg font-bold text-black mb-4">Newsletter</h3>
+            <p className="text-sm text-black mb-2">Sign up to receive updates on new arrivals and special offers.</p>
             <div className="flex">
               <input
                 type="email"
                 placeholder="Your email"
-                className="flex-1 px-3 py-2 text-sm border border-[#e9d8fd] rounded-l-sm focus:outline-none focus:ring-1 focus:ring-[#6b46c1]"
+                className="flex-1 px-3 py-2 text-sm border border-[#e9d8fd] rounded-l-sm focus:outline-none focus:ring-1 focus:ring-black"
               />
-              <button className="bg-[#6b46c1] text-white px-4 py-2 rounded-r-sm hover:bg-[#553c9a] transition-colors">
+              <button className="bg-black text-white px-4 py-2 rounded-r-sm hover:bg-black/80 transition-colors">
                 Subscribe
               </button>
             </div>
           </div>
         </div>
-        <div className="mt-8 text-center text-sm text-black/70">
+        <div className="mt-8 text-center text-sm text-black">
           &copy; {new Date().getFullYear()} Luxe Essentials. All rights reserved.
         </div>
       </footer>

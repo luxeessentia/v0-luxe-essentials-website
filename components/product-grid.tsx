@@ -42,9 +42,9 @@ export function ProductGrid({ products }: { products: Product[] }) {
               />
             </div>
             <div className="mt-3">
-              <h3 className="text-sm md:text-base text-black font-light">{product.name}</h3>
+              <h3 className="text-sm md:text-base text-black font-bold">{product.name}</h3>
               <div className="flex items-center gap-2">
-                <p className="text-sm text-black/80">{product.price}</p>
+                <p className="text-sm text-black">{product.price}</p>
                 {product.originalPrice && <p className="text-xs text-black/60 line-through">{product.originalPrice}</p>}
               </div>
               {product.colors && product.colors.length > 0 && (

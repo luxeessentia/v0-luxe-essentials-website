@@ -82,8 +82,8 @@ export function FilterSidebar() {
       {/* Desktop Sidebar */}
       <div className="hidden md:block w-64 bg-white rounded-lg shadow-md p-4 sticky top-24 self-start">
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-lg font-medium text-black">Filters</h2>
-          <button onClick={resetFilters} className="text-sm text-black hover:text-[#6b46c1]">
+          <h2 className="text-lg font-bold text-black">Filters</h2>
+          <button onClick={resetFilters} className="text-sm text-black hover:text-black">
             Reset All
           </button>
         </div>
@@ -91,7 +91,7 @@ export function FilterSidebar() {
         {/* Price Range */}
         <div className="mb-4 border-b border-[#e9d8fd] pb-4">
           <button
-            className="flex justify-between items-center w-full text-left font-medium text-black mb-2"
+            className="flex justify-between items-center w-full text-left font-bold text-black mb-2"
             onClick={() => toggleSection("price")}
           >
             <span>Price Range</span>
@@ -102,7 +102,7 @@ export function FilterSidebar() {
             <div className="mt-2">
               <div className="flex items-center gap-2 mb-2">
                 <div className="flex-1">
-                  <label htmlFor="min-price" className="block text-xs text-black/70 mb-1">
+                  <label htmlFor="min-price" className="block text-xs text-black mb-1">
                     Min
                   </label>
                   <input
@@ -116,7 +116,7 @@ export function FilterSidebar() {
                   />
                 </div>
                 <div className="flex-1">
-                  <label htmlFor="max-price" className="block text-xs text-black/70 mb-1">
+                  <label htmlFor="max-price" className="block text-xs text-black mb-1">
                     Max
                   </label>
                   <input
@@ -145,7 +145,7 @@ export function FilterSidebar() {
         {/* Colors */}
         <div className="mb-4 border-b border-[#e9d8fd] pb-4">
           <button
-            className="flex justify-between items-center w-full text-left font-medium text-black mb-2"
+            className="flex justify-between items-center w-full text-left font-bold text-black mb-2"
             onClick={() => toggleSection("color")}
           >
             <span>Colors</span>
@@ -162,7 +162,7 @@ export function FilterSidebar() {
                   title={colorDisplay[color]?.text || color}
                 >
                   <span className={`block w-6 h-6 rounded-full ${colorDisplay[color]?.bg || "bg-gray-200"}`}></span>
-                  <span className="text-xs mt-1 text-black/70">{colorDisplay[color]?.text || color}</span>
+                  <span className="text-xs mt-1 text-black">{colorDisplay[color]?.text || color}</span>
                 </button>
               ))}
             </div>
@@ -172,7 +172,7 @@ export function FilterSidebar() {
         {/* Categories */}
         <div className="mb-4 border-b border-[#e9d8fd] pb-4">
           <button
-            className="flex justify-between items-center w-full text-left font-medium text-black mb-2"
+            className="flex justify-between items-center w-full text-left font-bold text-black mb-2"
             onClick={() => toggleSection("category")}
           >
             <span>Categories</span>
@@ -189,7 +189,7 @@ export function FilterSidebar() {
                     onChange={() => toggleCategory(category)}
                     className="mr-2 accent-black"
                   />
-                  <span className="text-sm capitalize">{category}</span>
+                  <span className="text-sm capitalize text-black">{category}</span>
                 </label>
               ))}
             </div>
@@ -199,7 +199,7 @@ export function FilterSidebar() {
         {/* Subcategories */}
         <div className="mb-4 border-b border-[#e9d8fd] pb-4">
           <button
-            className="flex justify-between items-center w-full text-left font-medium text-black mb-2"
+            className="flex justify-between items-center w-full text-left font-bold text-black mb-2"
             onClick={() => toggleSection("subcategory")}
           >
             <span>Product Types</span>
@@ -216,7 +216,7 @@ export function FilterSidebar() {
                     onChange={() => toggleSubcategory(subcategory)}
                     className="mr-2 accent-black"
                   />
-                  <span className="text-sm capitalize">{subcategory}</span>
+                  <span className="text-sm capitalize text-black">{subcategory}</span>
                 </label>
               ))}
             </div>
@@ -226,7 +226,7 @@ export function FilterSidebar() {
         {/* Sizes */}
         <div className="mb-4">
           <button
-            className="flex justify-between items-center w-full text-left font-medium text-black mb-2"
+            className="flex justify-between items-center w-full text-left font-bold text-black mb-2"
             onClick={() => toggleSection("size")}
           >
             <span>Sizes</span>
@@ -261,7 +261,7 @@ export function FilterSidebar() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-lg font-medium text-black">Filters</h2>
+              <h2 className="text-lg font-bold text-black">Filters</h2>
               <button onClick={() => setIsOpen(false)}>
                 <X className="h-5 w-5 text-black" />
               </button>
@@ -274,7 +274,7 @@ export function FilterSidebar() {
             {/* Mobile Price Range */}
             <div className="mb-4 border-b border-[#e9d8fd] pb-4">
               <button
-                className="flex justify-between items-center w-full text-left font-medium text-black mb-2"
+                className="flex justify-between items-center w-full text-left font-bold text-black mb-2"
                 onClick={() => toggleSection("price-mobile")}
               >
                 <span>Price Range</span>
@@ -289,7 +289,7 @@ export function FilterSidebar() {
                 <div className="mt-2">
                   <div className="flex items-center gap-2 mb-2">
                     <div className="flex-1">
-                      <label htmlFor="min-price-mobile" className="block text-xs text-black/70 mb-1">
+                      <label htmlFor="min-price-mobile" className="block text-xs text-black mb-1">
                         Min
                       </label>
                       <input
@@ -303,7 +303,7 @@ export function FilterSidebar() {
                       />
                     </div>
                     <div className="flex-1">
-                      <label htmlFor="max-price-mobile" className="block text-xs text-black/70 mb-1">
+                      <label htmlFor="max-price-mobile" className="block text-xs text-black mb-1">
                         Max
                       </label>
                       <input
@@ -332,7 +332,7 @@ export function FilterSidebar() {
             {/* Mobile Colors */}
             <div className="mb-4 border-b border-[#e9d8fd] pb-4">
               <button
-                className="flex justify-between items-center w-full text-left font-medium text-black mb-2"
+                className="flex justify-between items-center w-full text-left font-bold text-black mb-2"
                 onClick={() => toggleSection("color-mobile")}
               >
                 <span>Colors</span>
@@ -353,7 +353,7 @@ export function FilterSidebar() {
                       title={colorDisplay[color]?.text || color}
                     >
                       <span className={`block w-6 h-6 rounded-full ${colorDisplay[color]?.bg || "bg-gray-200"}`}></span>
-                      <span className="text-xs mt-1 text-black/70">{colorDisplay[color]?.text || color}</span>
+                      <span className="text-xs mt-1 text-black">{colorDisplay[color]?.text || color}</span>
                     </button>
                   ))}
                 </div>
@@ -363,7 +363,7 @@ export function FilterSidebar() {
             {/* Mobile Categories */}
             <div className="mb-4 border-b border-[#e9d8fd] pb-4">
               <button
-                className="flex justify-between items-center w-full text-left font-medium text-black mb-2"
+                className="flex justify-between items-center w-full text-left font-bold text-black mb-2"
                 onClick={() => toggleSection("category-mobile")}
               >
                 <span>Categories</span>
@@ -384,7 +384,7 @@ export function FilterSidebar() {
                         onChange={() => toggleCategory(category)}
                         className="mr-2 accent-black"
                       />
-                      <span className="text-sm capitalize">{category}</span>
+                      <span className="text-sm capitalize text-black">{category}</span>
                     </label>
                   ))}
                 </div>
@@ -394,7 +394,7 @@ export function FilterSidebar() {
             {/* Mobile Subcategories */}
             <div className="mb-4 border-b border-[#e9d8fd] pb-4">
               <button
-                className="flex justify-between items-center w-full text-left font-medium text-black mb-2"
+                className="flex justify-between items-center w-full text-left font-bold text-black mb-2"
                 onClick={() => toggleSection("subcategory-mobile")}
               >
                 <span>Product Types</span>
@@ -415,7 +415,7 @@ export function FilterSidebar() {
                         onChange={() => toggleSubcategory(subcategory)}
                         className="mr-2 accent-black"
                       />
-                      <span className="text-sm capitalize">{subcategory}</span>
+                      <span className="text-sm capitalize text-black">{subcategory}</span>
                     </label>
                   ))}
                 </div>
@@ -425,7 +425,7 @@ export function FilterSidebar() {
             {/* Mobile Sizes */}
             <div className="mb-4">
               <button
-                className="flex justify-between items-center w-full text-left font-medium text-black mb-2"
+                className="flex justify-between items-center w-full text-left font-bold text-black mb-2"
                 onClick={() => toggleSection("size-mobile")}
               >
                 <span>Sizes</span>

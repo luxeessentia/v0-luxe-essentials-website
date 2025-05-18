@@ -39,7 +39,7 @@ function ShopContent() {
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
             <SearchBar />
             <div className="flex items-center gap-4 w-full md:w-auto">
-              <div className="text-sm text-black/70 hidden md:block">
+              <div className="text-sm text-black hidden md:block">
                 <span>{filteredProducts.length} products</span>
                 {activeFiltersCount > 0 && <span className="ml-2">({activeFiltersCount} filters active)</span>}
               </div>
@@ -58,7 +58,7 @@ function ShopContent() {
 export default function ShopPage() {
   return (
     <main className="max-w-7xl mx-auto px-4 py-8 pb-16">
-      <h1 className="text-2xl font-light text-black text-center mb-6">Shop All Products</h1>
+      <h1 className="text-2xl font-bold text-black text-center mb-6">Shop All Products</h1>
 
       <FilterProvider>
         <ShopContent />

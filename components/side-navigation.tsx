@@ -11,10 +11,20 @@ const navigationItems = [
     href: "/shop",
     subItems: [
       { name: "All Products", href: "/shop" },
-      { name: "Bags", href: "/shop/bags" },
-      { name: "Tech", href: "/shop/tech" },
-      { name: "Jewelry", href: "/shop/jewelry" },
-      { name: "Beauty", href: "/shop/beauty" },
+      { name: "Handmade Bags", href: "/shop/bags" },
+      { name: "Clothing", href: "/shop/clothing" },
+      {
+        name: "Tech & Accessories",
+        href: "/shop/tech",
+        subItems: [
+          { name: "Phone Accessories", href: "/shop/tech?subcategory=phone" },
+          { name: "Audio", href: "/shop/tech?subcategory=audio" },
+          { name: "Wellness Devices", href: "/shop/tech?subcategory=wellness" },
+        ],
+      },
+      { name: "Beauty/Makeup", href: "/shop/beauty" },
+      { name: "Jewelry & Accessories", href: "/shop/jewelry" },
+      { name: "Footwear", href: "/shop/footwear" },
     ],
   },
   { name: "Login/Register", href: "/login" },
@@ -39,7 +49,7 @@ export function SideNavigation() {
           {item.subItems ? (
             <button
               onClick={() => toggleExpand(item.name)}
-              className={`flex items-center justify-between w-full py-2 px-4 text-black hover:bg-[#e9d8fd]/50 rounded-sm transition-colors ${level > 0 ? "text-sm pl-8" : ""}`}
+              className={`flex items-center justify-between w-full py-2 px-4 text-black font-bold hover:bg-[#e9d8fd]/50 rounded-sm transition-colors ${level > 0 ? "text-sm pl-8" : ""}`}
             >
               <span>{item.name}</span>
               {expandedItems.includes(item.name) ? (
@@ -51,7 +61,7 @@ export function SideNavigation() {
           ) : (
             <Link
               href={item.href}
-              className={`block w-full py-2 px-4 text-black hover:bg-[#e9d8fd]/50 rounded-sm transition-colors ${level > 0 ? "text-sm pl-8" : ""}`}
+              className={`block w-full py-2 px-4 text-black font-bold hover:bg-[#e9d8fd]/50 rounded-sm transition-colors ${level > 0 ? "text-sm pl-8" : ""}`}
               onClick={() => setIsOpen(false)} // Close mobile menu when clicking a link
             >
               {item.name}
@@ -92,7 +102,7 @@ export function SideNavigation() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="p-4 flex justify-between items-center border-b border-[#e9d8fd]">
-              <h2 className="font-light text-black">Menu</h2>
+              <h2 className="font-bold text-black">Menu</h2>
               <button onClick={() => setIsOpen(false)}>
                 <X className="h-5 w-5 text-black" />
                 <span className="sr-only">Close Menu</span>
