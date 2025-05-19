@@ -12,7 +12,7 @@ export function ProductGrid({ products }: { products: Product[] }) {
   if (products.length === 0) {
     return (
       <div className="text-center py-12">
-        <p className="text-black text-lg font-bold">No products found matching your criteria.</p>
+        <p className="text-black text-lg">No products found matching your criteria.</p>
         <p className="text-black/70 mt-2">Try adjusting your filters or search query.</p>
       </div>
     )
@@ -44,7 +44,7 @@ export function ProductGrid({ products }: { products: Product[] }) {
             <div className="mt-3">
               <h3 className="text-sm md:text-base text-black font-bold">{product.name}</h3>
               <div className="flex items-center gap-2">
-                <p className="text-sm text-black/80">{product.price}</p>
+                <p className="text-sm text-black">{product.price}</p>
                 {product.originalPrice && <p className="text-xs text-black/60 line-through">{product.originalPrice}</p>}
               </div>
               {product.colors && product.colors.length > 0 && (

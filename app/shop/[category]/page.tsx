@@ -51,7 +51,7 @@ function CategoryContent() {
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
             <SearchBar />
             <div className="flex items-center gap-4">
-              <div className="text-sm text-black/70">
+              <div className="text-sm text-black">
                 <span>{filteredProducts.length} products</span>
                 {activeFiltersCount > 0 && <span className="ml-2">({activeFiltersCount} filters active)</span>}
               </div>
@@ -78,7 +78,7 @@ export default function CategoryPage() {
 
   return (
     <main className="max-w-7xl mx-auto px-4 py-8 pb-16">
-      <h1 className="text-2xl font-light text-black text-center mb-6">{formatCategoryName(category)} Collection</h1>
+      <h1 className="text-2xl font-bold text-black text-center mb-6">{formatCategoryName(category)} Collection</h1>
 
       <FilterProvider>
         <CategoryContent />

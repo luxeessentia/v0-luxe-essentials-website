@@ -43,7 +43,7 @@ export function SortDropdown() {
     <div className="relative w-full md:w-48" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-between w-full px-3 py-2 bg-white border border-[#e9d8fd] rounded-sm text-black"
+        className="flex items-center justify-between w-full px-3 py-2 bg-white border border-[#e9d8fd] rounded-sm text-black font-bold"
       >
         <span>{currentSortOption.label}</span>
         <ChevronDown className="h-4 w-4 ml-2" />
@@ -57,8 +57,8 @@ export function SortDropdown() {
                 <button
                   onClick={() => handleSortChange(option.value)}
                   className={`w-full text-left px-3 py-2 hover:bg-[#e9d8fd]/30 ${
-                    option.value === filters.sortBy ? "bg-[#e9d8fd]/50 font-medium" : ""
-                  }`}
+                    option.value === filters.sortBy ? "bg-[#e9d8fd]/50 font-bold" : ""
+                  } text-black`}
                 >
                   {option.label}
                 </button>
